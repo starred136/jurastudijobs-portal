@@ -1,0 +1,213 @@
+/* === Navbar Styles === */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 15px 80px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #616161;
+    font-weight: bold;
+}
+
+/* === Header Section === */
+.header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.blue {
+    color: #457B9D;
+}
+
+/* === Job Listings Section === */
+.job-listing-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* === Job Card Styles === */
+.job-card {
+    position: relative;
+    padding: 20px;
+    margin: 0 15%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.job-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* === Job Header (Company Info) === */
+.job-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.company-logo {
+    width: 50px;
+}
+
+.job-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d3559;
+}
+
+.job-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* === Job Content Section === */
+.job-contain {
+    padding-left: 50px;
+}
+
+/* === Location & Language Section === */
+.location {
+    font-size: 14px;
+    color: #666;
+}
+
+.langue-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.language-image {
+    height: 35px;
+}
+
+.semester-image {
+    height: 35px;
+}
+
+/* === Apply Button === */
+.apply-button {
+    background-color: #E53945;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button img {
+    width: 16px;
+}
+
+.job-card:hover .apply-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* === Job Tags === */
+.job-tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.job-tag {
+    background-color: #EEEFF2;
+    color: black;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* === Responsive Design === */
+@media (max-width: 992px) {
+    .header h1 {
+        font-size: 35px;
+    }
+
+    .navbar {
+        padding: 10px 40px;
+    }
+
+    .job-card {
+        margin: 0 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .menu ul {
+        gap: 10px;
+    }
+
+    .job-card {
+        padding: 15px;
+    }
+
+    .apply-button {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .company-name {
+        font-size: 12px;
+    }
+
+    .job-title {
+        font-size: 18px;
+    }
+
+    .location {
+        font-size: 12px;
+    }
+
+    .apply-button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}

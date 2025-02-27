@@ -1,0 +1,71 @@
+/* === Job Details Page Styles === */
+.job-details-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.job-details-container h1 {
+    font-size: 28px;
+    color: #1d3559;
+    margin-bottom: 10px;
+}
+
+.job-details-container img {
+    width: 100px;
+    height: auto;
+    margin: 10px 0;
+}
+
+.job-details-container h3 {
+    font-size: 18px;
+    color: #457B9D;
+    margin-bottom: 5px;
+}
+
+.job-details-container p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* === Job Tags Section === */
+.job-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.job-tag {
+    background-color: #EEEFF2;
+    color: #1d3559;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* === Apply Button === */
+.apply-button {
+    background-color: #E53945;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #c32e3a;
+}
+
+/* === Responsive
