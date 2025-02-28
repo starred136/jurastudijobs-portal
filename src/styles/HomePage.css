@@ -2,9 +2,10 @@
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
     background-color: #ffffff;
-    padding: 15px 80px;
+    padding: 10px 80px;
+    gap: 2rem;
     border-bottom: 1px solid #ddd;
 }
 
@@ -17,6 +18,9 @@
     display: flex;
     gap: 20px;
 }
+ .menu ul li {
+            margin-left: 0px;
+        }
 
 .menu ul li a {
     text-decoration: none;
@@ -26,8 +30,12 @@
 
 /* === Header Section === */
 .header {
+    display: flex;
+    justify-content: center;
     text-align: center;
     padding: 40px 20px;
+    font-weight: bold;
+    width: 100%;
 }
 
 .header h1 {
@@ -59,6 +67,14 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     /* cursor: pointer; */
+
+     /* ✅ Prevent content from overflowing */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+    justify-content: space-between;
+    overflow: hidden; /* Prevents items from spilling out */
+    max-width: 100%; /* Ensures card does not stretch */
 }
 
 .job-card:hover {
@@ -90,9 +106,11 @@
 }
 
 .job-title {
-    font-size: 22px;
+    position: relative;
+    font-size: 32px;
     font-weight: bold;
-    cursor: pointer; /* ✅ Ensure it's clickable */
+    cursor: pointer;
+     /* ✅ Ensure it's clickable */
 }
 
 /* === Job Content Section === */
@@ -113,15 +131,14 @@
     justify-content: space-between;
     gap: 12px;
     margin-top: 10px;
+    width: 100%;
 }
 
-.language-image {
-    height: 35px;
-}
 .language-image-single {
     height: 25px;
 }
 
+.language-image, 
 .semester-image {
     height: 35px;
     object-fit: contain;
@@ -175,10 +192,14 @@
     font-size: 12px;
 }
 
+.job-tag:hover {
+    background-color: #83AFAF; 
+}
+
 /* === Responsive Design === */
 @media (max-width: 992px) {
     .header h1 {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .navbar {
@@ -204,14 +225,14 @@
         cursor: pointer;
     }
     /* ✅ Make the entire job card clickable */
-    .mobile-click-area {
+    /* .mobile-click-area {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         z-index: 1;
-    }
+    } */
 
     /* Ensure company and job elements are above the clickable area */
     .job-header, .job-details, .langue-container, .job-tags {
@@ -226,23 +247,22 @@
     }
 
     /* === Job Content Section === */
-.job-contain {
-    padding-left: 0px;
+    .job-contain {
+        padding-left: 0px;
+    }
+    
+    .job-tags {
+        overflow-x: auto;
+        position: relative;
+        white-space: nowrap;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
 }
-
-.job-tags {
-                overflow-x: auto;
-                position: relative;
-                white-space: nowrap;
-                scrollbar-width: none;
-                -ms-overflow-style: none;
-            }
-
-
-
-}
-
-@media (max-width: 576px) {
+   
+    
+    @media (max-width: 576px) {
     .header h1 {
         font-size: 22px;
     }

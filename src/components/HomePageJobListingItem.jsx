@@ -46,15 +46,11 @@ const HomePageJobListingItem = ({ job }) => {
         {/* Language & Semester Images */}
         <div className="langue-container">
           {/* ✅ Language Images */}
-          {job.languages.map((lang, index) => (
-            <img key={index} src={lang} className="language-image" alt="Language" />
-          ))}
+          {job.languages && (
+            <img src={job.languages} className="language-image" alt="Language" />
+          )}
 
-          {/* ✅ Optional Small Language Image */}
-          {/* {job.singleLanguageImage && (
-            <img src={job.singleLanguageImage} className="language-image-single" alt="Single Language" />
-          )} */}
-
+        
           {/* ✅ Apply Button - Appears between Language & Semester Image */}
           <button className="apply-button" onClick={handleJobClick}>
             Bewerben <img src="/assets/icons/Login.png" alt="Login Icon" />
