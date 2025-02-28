@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { jobList } from "../api/jobs";
-import "../styles/JobDetailsPage.css"; // ✅ Import details page styles
+// import "../styles/JobDetailsPage.css"; // ✅ Import details page styles
 
 const JobDetailsPage = () => {
   const { id } = useParams();
