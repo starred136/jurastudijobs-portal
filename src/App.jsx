@@ -10,14 +10,20 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/job/:id" element={<JobDetailsPage />} />
 
+        {/* <Route path="/job/:companySlug/:jobTitleSlug" element={<JobDetailsPage />} /> */}
+        {/* <Route path="/company/:companyId" element={<CompanyDetailsPage />} /> */}
+        
+        <Route path="*" element={<NotFoundPage />} /> 
+
+        <Route path="/job/:id" element={<JobDetailsPage />} />
         <Route path="/company/:id" element={<CompanyDetailsPage />} />
         {/* This wildcard route will catch any undefined routes */}
-        <Route path="*" element={<NotFoundPage />} /> 
       </Routes>
     </Router>
   );
 };
 
 export default App;
+
+

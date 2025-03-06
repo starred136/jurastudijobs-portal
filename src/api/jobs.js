@@ -1,3 +1,4 @@
+
 export const jobList = [
   {
     id: 1,
@@ -49,7 +50,7 @@ export const jobList = [
       </ul>
       <h3>Requirements:</h3>
       <p>- Enrolled in a Law program<br>- Basic knowledge of contract law</p>
-      <img src="/assets/images/redbull-office.jpg" alt="Red Bull Office" />
+      
     `,
   },
   {
