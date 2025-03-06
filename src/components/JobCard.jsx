@@ -40,7 +40,9 @@ const JobCard = ({ job }) => {
         />
         <div className={styles["job-details"]}>
           <span className={styles["company-name"]} onClick={handleCompanyClick}>
+            <p>
             {job.company}
+            </p>
           </span>
           <h2 className={styles["job-title"]}>{job.title}</h2>
         </div>

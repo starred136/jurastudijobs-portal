@@ -107,8 +107,11 @@
     flex-direction: column;
 }
 
-.company-name {
+.company-name{
+width: fit-content;
     font-size: 14px;
+}
+.company-name p {
     font-weight: 600;
     color: #1d3559;
     cursor: pointer; /* ✅ Ensure it's clickable */
@@ -121,6 +124,9 @@
     cursor: pointer;
      /* ✅ Ensure it's clickable */
 }
+.job-title:hover, .company-name:hover {
+        color: #457B9D;
+    }
 
 /* === Job Content Section === */
 .job-contain {
@@ -322,6 +328,7 @@
     .job-title {
         font-size: 18px;
     }
+    
 
     .location {
         font-size: 12px;
