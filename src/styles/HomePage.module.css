@@ -258,6 +258,11 @@
         scrollbar-width: none;
         -ms-overflow-style: none;
     }
+
+    .job-card:hover .apply-button {
+    display: none;
+   
+}
     
 }
    
