@@ -35,7 +35,7 @@ const BackButton = () => {
         decoding="async"
         width="100"
         height="34"
-        src="https://jurastudijobs.com/wp-content/uploads/2025/02/Property-1Default.png"
+        src="/assets/icons/backbutton.png"
         alt="Back"
       />
     </div>
