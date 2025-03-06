@@ -8,6 +8,7 @@ export const jobList = [
     title: "Werkstudent Rechtsabteilung",
     location: "Vor Ort (München)",
     languages: "/assets/icons/Language.png",
+    semester: 1,
     semesterImage: "/assets/images/semester1.png",
     tags: ["Recherche", "Verträge", "Datenschutz-Management"],
     description: `
@@ -61,6 +62,7 @@ export const jobList = [
     title: "Werkstudent (m/w/d) im Bereich Jura",
     location: "Hybrid (Hanau)",
     languages: "/assets/icons/language-engish.png",
+    semester: 1,
     semesterImage: "/assets/images/semester2.png",
     tags: ["Vertragsklauseln", "Übersetzunge"],
     description: `
@@ -95,12 +97,13 @@ export const jobList = [
   },
   {
     id: 3,
-    company: "Giesecke+Devrient",
+    company: "Giesecke Devrient",
     companyId: "giesecke-devrient",
     logo: "/assets/images/giesecke-logo.png",
     title: "Werkstudent Datenschutz (m/w/d)",
     location: "Hybrid (München)",
-    languages: ["/assets/icons/Language.png"], // ✅ Now only imports ONE language image
+    languages: ["/assets/icons/Language.png"],
+    semester: 2,
     semesterImage: "/assets/images/semester3.png",
     tags: ["Unterstützung", "Datenschutz-Management-Systeme", "MS Office"],
     description: `
@@ -144,10 +147,11 @@ export const jobList = [
     id: 4,
     company: "Medacius",
     companyId: "medacius",
-    logo: "/assets/images/redbull-logo.png",
+    logo: "/assets/images/medacius-logo.png",
     title: "Werkstudent Contract (all genders)",
     location: "Vor Ort (München)",
-    languages: ["/assets/icons/Language.png"], // ✅ Already correct (one image)
+    languages: ["/assets/icons/Language.png"],
+    semester: 3,
     semesterImage: "/assets/images/semester2.png",
     tags: ["Vertragsdaten", "Klassifizierung", "Dokumentation", "Prüfung"],
     description: `
