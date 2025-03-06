@@ -28,7 +28,7 @@ const HomePageNavBar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <a href="#" className={styles.logo}>
+      <a href="/" className={styles.logo}>
         <img
           src="/assets/images/jurastudijobs-logo.png"
           alt="Jurastudi Jobs Logo"
