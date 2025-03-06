@@ -103,6 +103,7 @@ body {
     list-style: disc inside;
     margin-top: 10px;
     font-size: 14px;
+    padding-inline-start: 40px;
 }
 
 /* Apply Button */
