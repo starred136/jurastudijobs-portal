@@ -1,27 +1,38 @@
+import React from "react";
 import { useParams } from "react-router-dom";
+import HomePageNavBar from "../components/HomePageNavBar";
+import BackButton from "../components/JobDetailsPage/BackButton";
+import CompanyJobOptionSection from "../components/JobDetailsPage/CompanyJobOptionSection";
 import { jobList } from "../api/jobs";
-// import "../styles/JobDetailsPage.css"; // ✅ Import details page styles
 
 const JobDetailsPage = () => {
-  const { id } = useParams();
+  const { id } = useParams(); // Get job ID from URL
   const job = jobList.find((job) => job.id === parseInt(id));
 
+  console.log("Job List:", jobList);
+  console.log("Current Job:", job);
+
   if (!job) {
-    return <h2>Job not found</h2>;
+    return (
+      <div>
+        <h2>Job not found</h2>
+        <h3>Available Jobs:</h3>
+        {jobList.map((job) => (
+          <div key={job.id}>
+            <p>Job Title: {job.title}</p>
+            <p>Company: {job.company}</p>
+            <p>Location: {job.location}</p>
+          </div>
+        ))}
+      </div>
+    );
   }
 
   return (
-    <div className="job-details-container">
-      <h1>{job.title}</h1>
-      <img src={job.logo} alt={`${job.company} Logo`} />
-      <h3>Company: {job.company}</h3>
-      <p>Location: {job.location}</p>
-      <div className="job-tags">
-        {job.tags.map((tag, index) => (
-          <span key={index} className="job-tag">{tag}</span>
-        ))}
-      </div>
-      <button className="apply-button">Apply Now</button>
+    <div key={job.id}>
+      <HomePageNavBar />
+      <BackButton />
+      <CompanyJobOptionSection job={job} />
     </div>
   );
 };

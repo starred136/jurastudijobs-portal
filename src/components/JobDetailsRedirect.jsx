@@ -1,18 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/HomePage.css";
-
-
+import styles from "../styles/HomePage.module.css"; 
 
 const JobDetailsRedirect = ({ jobId }) => {
   const navigate = useNavigate();
 
+  const handleApplyClick = () => {
+    navigate(`/job/${jobId}`);
+  };
+
   return (
-    <button
-      className="apply-button"
-      onClick={() => navigate(`/job/${jobId}`)}
-    >
-      View Details
+    <button className={styles["apply-button"]} onClick={handleApplyClick}>
+      Bewerben <img src="/assets/icons/Login.png" alt="Login Icon" />
     </button>
   );
 };

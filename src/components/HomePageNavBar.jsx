@@ -1,17 +1,17 @@
 import React from "react";
-
-import "../styles/HomePage.css";
-
+import styles from "../styles/HomePage.module.css";
 
 const HomePageNavBar = () => {
   return (
-    <nav className="navbar">
-      <a href="#" className="logo">
+    <nav className={styles.navbar}>
+      <a href="#" className={styles.logo}>
         <img src="/assets/images/jurastudijobs-logo.png" alt="Jurastudi Jobs Logo" />
       </a>
-      <div className="menu">
+      <div className={styles.menu}>
         <ul>
-          <li><a href="#">Blog</a></li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
         </ul>
       </div>
     </nav>

@@ -1,0 +1,44 @@
+/* NotFoundPage.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ece9e6, #ffffff);
+  padding: 20px;
+  text-align: center;
+}
+
+.errorCode {
+  font-size: 10rem;
+  color: #e53945;
+  margin: 0;
+}
+
+.errorMessage {
+  font-size: 2.5rem;
+  margin: 10px 0;
+  color: #1d3559;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #616161;
+  margin-bottom: 20px;
+}
+
+.homeButton {
+  background-color: #457B9D;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.homeButton:hover {
+  background-color: #1d3559;
+}

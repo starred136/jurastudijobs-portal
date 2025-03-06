@@ -1,22 +1,15 @@
 import React from "react";
 import HomePageNavBar from "../components/HomePageNavBar";
 import HomePageHeader from "../components/HomePageHeader";
-import HomePageJobListingItem from "../components/HomePageJobListingItem";
-import { jobList } from "../api/jobs";
-
-import "../styles/HomePage.css"; 
-
+import HomePageJobCardSection from "../components/HomePageJobCardSection";
+import styles from "../styles/HomePage.module.css"; // Import as a module
 
 const HomePage = () => {
   return (
-    <div>
+    <div className={styles.homePage}>
       <HomePageNavBar />
       <HomePageHeader />
-      <div className="job-listing-container">
-        {jobList.map((job) => (
-          <HomePageJobListingItem key={job.id} job={job} />
-        ))}
-      </div>
+      <HomePageJobCardSection />
     </div>
   );
 };
