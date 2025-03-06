@@ -10,19 +10,19 @@ const CompanyJobDetail = ({ job }) => {
           {job.title}
         </h1>
         <ul className={styles.jobDetails}>
-          <li>
-            <img src={job.languages} alt="Languages" />
-            <span>Deutsch, Englisch</span>
-          </li>
-          <li>
-            <img src="/assets/icons/location.svg" alt="Location" />
-            <span>{job.location}</span>
-          </li>
-          <li>
-            <img src={job.semesterImage} alt="Duration" />
-            <span>1 Semester</span>
-          </li>
-        </ul>
+            <li>
+              <img src="/assets/icons/world.png" alt="Languages" />
+              <span>Deutsch, Englisch</span>
+            </li>
+            <li>
+              <img src="/assets/icons/home.png" alt="Location" />
+              <span>{job.location}</span>
+            </li>
+            <li>
+              <img src="/assets/icons/time.png" alt="Duration" />
+              <span>1 Semester</span>
+            </li>
+          </ul>
       </div>
 
       <div className={styles.ligneBoutons}>
