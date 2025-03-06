@@ -241,20 +241,27 @@
 
     .menu.open {
         display: flex;
-        width: 100%;
+        flex-direction:column;
+
     }
     
     .menu-toggle {
         display: block;
     }
     
-    .header h1 {
-        font-size: 28px;
+    .menu {
+        width: 100%;
     }
 
     .menu ul {
         gap: 10px;
+        margin-left: 20px;
     }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
 
     .job-card {
         padding: 15px;
