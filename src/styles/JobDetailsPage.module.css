@@ -20,10 +20,10 @@ body {
 }
 
 /* Job Header Section */
-.job-header {
+/* .job-header {
     display: flex;
     align-items: center;
-}
+} */
 
 .job-header img {
     width: auto;
@@ -35,6 +35,8 @@ body {
     font-size: 32px;
     font-weight: 700;
     color: #111827;
+    display: flex;
+    align-items: center;
 }
 
 /* Job Details Section */

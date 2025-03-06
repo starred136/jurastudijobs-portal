@@ -10,7 +10,7 @@ const ApplyButton = ({ job }) => {
   };
 
   return (
-    <button className={styles.applyButton} onClick={handleApplyClick}>
+    <button className={styles["apply-button"]} onClick={handleApplyClick}>
       Jetzt bewerben
     </button>
   );

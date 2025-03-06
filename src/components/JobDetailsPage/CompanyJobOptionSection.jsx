@@ -1,6 +1,6 @@
 import React from "react";
 import ApplyButton from "./ApplyButton";
-import CompanyJobDescription from "./CompanyJobDescription";
+// import CompanyJobDescription from "./CompanyJobDescription";
 import CompanyJobDetail from "./CompanyJobDetail";
 import styles from "../../styles/JobDetailsPage.module.css";
 
@@ -11,7 +11,7 @@ const CompanyJobOptionSection = ({ job }) => {
       <CompanyJobDetail job={job} />
 
       {/* Job Description */}
-      <CompanyJobDescription job={job} />
+      {/* <CompanyJobDescription job={job} /> */}
 
       {/* Apply Button */}
       <ApplyButton job={job} />

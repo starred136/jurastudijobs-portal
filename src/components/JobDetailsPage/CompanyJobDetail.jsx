@@ -3,13 +3,13 @@ import styles from "../../styles/JobDetailsPage.module.css";
 
 const CompanyJobDetail = ({ job }) => {
   return (
-    <div className={styles.companyJobDetail}>
-      <div className={styles.jobHeader}>
+    <div className={styles["company-job-detail"]}> 
+      <div className={styles["job-header"]}> 
         <h1>
-          <img src={job.logo} alt="Company Logo" className={styles.headerImage} />
+          <img src={job.logo} alt="Company Logo" className={styles["header-image"]} />
           {job.title}
         </h1>
-        <ul className={styles.jobDetails}>
+        <ul className={styles["job-details"]}>
             <li>
               <img src="/assets/icons/world.png" alt="Languages" />
               <span>Deutsch, Englisch</span>
@@ -25,12 +25,17 @@ const CompanyJobDetail = ({ job }) => {
           </ul>
       </div>
 
-      <div className={styles.ligneBoutons}>
+      <div className={styles["ligne-boutons"]}> 
         {job.tags.map((tag, index) => (
-          <button key={index} className={styles.btnNonCliquable}>
+          <button key={index} className={styles["btn-non-cliquable"]}> 
             {tag}
           </button>
         ))}
+      </div>
+      
+      {/* Job Description */}
+      <div className={styles["job-description"]}> 
+        <div dangerouslySetInnerHTML={{ __html: job.description }} />
       </div>
     </div>
   );
