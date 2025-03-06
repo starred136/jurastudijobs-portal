@@ -62,3 +62,116 @@ body {
     background-color: #E53945;
 } */
 
+/* Conteneur principal */
+.joblisting {
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* En-tête du job */
+.job-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #111827; /* Couleur principale */
+    display: flex; /* Aligne l'image et le texte horizontalement */
+    align-items: center; /* Aligne verticalement l'image et le texte */
+}
+
+.job-header h1 .header-image {
+    width: auto; /* Laisse la largeur s'adapter à la hauteur */
+    height: 100%; /* L'image prend toute la hauteur du texte */
+    margin-right: 8px; /* Ajoute un espacement de 8px entre l'image et le texte */
+}
+
+/* Liste des détails */
+.job-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 14px;
+}
+
+.job-details li {
+    display: flex;
+    align-items: center;
+    color: #666e7a; /* Couleur secondaire */
+}
+
+.job-details img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+/* Ligne des boutons */
+.ligne-boutons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    max-width: 100%; /* Permet aux boutons de s'ajuster */
+    flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si nécessaire */
+}
+
+.ligne-boutons .btn-non-cliquable {
+    display: flex;
+    align-items: center;
+    background-color: #F0FAEF;
+    color: #333946; /* Couleur des textes des boutons */
+    padding: 6px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: not-allowed;
+    flex-shrink: 0;
+    white-space: nowrap; /* Empêche le texte de se diviser à l'intérieur des boutons */
+}
+
+/* Description du job */
+.job-description h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827; /* Couleur principale */
+    margin-bottom: 10px;
+}
+
+.job-description p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333946; /* Couleur principale du texte */
+}
+
+.job-description ul {
+    list-style: disc inside;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.apply-button {
+    display: block;
+    background-color: #1D3559;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px auto 0;
+    transition: background-color 0.3s;
+}
+
+.apply-button:hover {
+    background-color: #E53945;
+}
