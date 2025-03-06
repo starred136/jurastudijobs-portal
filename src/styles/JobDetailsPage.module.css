@@ -101,7 +101,7 @@ body {
 
 .job-description ul {
     list-style: disc inside;
-    margin-top: 10px;
+    margin: 10px 10px;
     font-size: 14px;
     padding-inline-start: 40px;
 }
