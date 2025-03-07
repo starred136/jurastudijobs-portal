@@ -28,6 +28,11 @@
     font-weight: bold;
 }
 
+.menu ul li a:hover{
+    color: #457B9D;
+}
+
+
 /* Hamburger Menu */
 .menu-toggle {
     display: none;
