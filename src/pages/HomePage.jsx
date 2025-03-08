@@ -2,7 +2,7 @@ import React from "react";
 import HomePageNavBar from "../components/HomePageNavBar";
 import HomePageHeader from "../components/HomePageHeader";
 import HomePageJobCardSection from "../components/HomePageJobCardSection";
-import styles from "../styles/HomePage.module.css"; // Import as a module
+import styles from "../styles/HomePage.module.css"; 
 
 const HomePage = () => {
   return (

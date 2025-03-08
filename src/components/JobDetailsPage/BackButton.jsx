@@ -30,7 +30,7 @@ const BackButton = () => {
   };
 
   return (
-    <div className={styles.backButton} onClick={handleBackClick} role="button">
+    <div className={styles.backButton} onClick={handleBackClick} role="button" style={{ cursor: 'pointer' }}>
       <img
         decoding="async"
         width="100"

@@ -1,39 +1,44 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import { jobList } from "../api/jobs";
+import { useNavigate, useParams } from "react-router-dom";
+import { jobList } from "../api/jobs"; // Ensure the correct import path
+import styles from "../styles/NotFoundPage.module.css";
 
 const normalizeText = (text) => text.replace(/-/g, " ").toLowerCase();
 
-const CompanyPage = () => {
+const NotFoundPage = () => {
+  const navigate = useNavigate();
   const { companyName } = useParams();
 
-  // Find jobs for this company
-  const jobs = jobList.filter(
-    (job) => job.company.toLowerCase() === normalizeText(companyName)
+  // Find the first job for this company
+  const job = jobList.find(
+    (job) => normalizeText(job.company) === normalizeText(companyName)
   );
 
-  if (jobs.length === 0) {
-    return <h2>Company not found</h2>;
-  }
-
   return (
-    <div className="company-details-container">
-      <h1>{jobs[0].company}</h1>
-      <img src={jobs[0].logo} alt={`${jobs[0].company} Logo`} />
-      <p>Location: {jobs[0].location}</p>
-      
-      <h2>Available Jobs at {jobs[0].company}:</h2>
-      <ul>
-        {jobs.map((job) => (
-          <li key={job.id}>
-            <a href={`/${normalizeText(job.company)}/job/${normalizeText(job.title)}`}>
-              {job.title}
-            </a>
-          </li>
-        ))}
-      </ul>
+    <div className={styles.container}>
+      {/* ✅ Display company logo & name if found */}
+      {job ? (
+        <>
+          <img src={job.logo} alt={`${job.company} Logo`} className={styles.logo} />
+          <h1 className={styles.companyName}>{job.company}</h1>
+        </>
+      ) : (
+        <h2 className={styles.errorMessage}>Working</h2>
+      )}
+
+      {/* 🚧 Error Message */}
+      <h1 className={styles.errorCode}>🚧</h1>
+      <h2 className={styles.errorMessage}>Bald verfügbar!</h2>
+      <p className={styles.description}>
+        Wir bereiten wertvolle Informationen für Sie vor. Bleiben Sie dran!
+      </p>
+
+      {/* 🏠 Home Button */}
+      <button className={styles.homeButton} onClick={() => navigate("/")}>
+        Zur Startseite
+      </button>
     </div>
   );
 };
 
-export default CompanyPage;
+export default NotFoundPage;

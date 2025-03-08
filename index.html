@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="pragma" content="no-cache">
-  <meta http-equiv="expires" content="0"> -->
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-kPx0AsF0oz2kKiZ875xSvv693TBHkQ/0SkMJZnnNpnQ='">
+
 
 
 
@@ -18,15 +20,7 @@
 <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script>
-  if ('caches' in window) {
-    caches.keys().then(names => {
-      names.forEach(name => {
-        caches.delete(name);
-      });
-    });
-  }
-</script>
+    <script src="clearCache.js"></script>
 
 </body>
 </html>

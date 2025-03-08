@@ -9,9 +9,8 @@ const slugify = (text) =>
     .toString()
     .toLowerCase()
     .trim()
-    .replace(/\s+/g, "-")
-// .replace(/[^\w\-]+/g, ""
-    // .replace(/[^\w\-\(\)\/]+/g, "" // Keep parentheses and slashes
+    .replace(/\s+/g, "-") // Replace spaces with hyphens
+    // .replace(/[^\w\-\(\)\/]+/g, "" // muting this Keep parentheses and slashes alone with all characters silent
   );
 
 const JobCard = ({ job }) => {

@@ -1,12 +1,18 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react"; 
 import styles from "../../styles/JobDetailsPage.module.css";
 
 const ApplyButton = ({ job }) => {
-  const navigate = useNavigate();
-
   const handleApplyClick = () => {
-    navigate(`/apply/${job.id}`);
+    if (!job.applyLink) {
+      alert("Kein Bewerbungslink für diesen Job verfügbar. Kommt bald. Bitte bleiben Sie dran.");
+      return;
+    }
+
+    // Construct the dynamic application link with URL parameters
+    const externalApplyUrl = `${job.applyLink}/apply?From=Jurastudijobs.com&company=${encodeURIComponent(job.company)}&jobTitle=${encodeURIComponent(job.title)}`;
+
+    // Redirect to the external job application link
+    window.location.href = externalApplyUrl;
   };
 
   return (

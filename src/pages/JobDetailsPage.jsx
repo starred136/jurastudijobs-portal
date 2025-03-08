@@ -8,7 +8,8 @@ import { jobList } from "../api/jobs";
 // Function to convert slug back to normal text
 // const normalizeText = (text) => text.replace(/-/g, " ").toLowerCase();
 // const normalizeText = (text) => text.replace(/-/g, " ").trim().toLowerCase();
-const normalizeText = (text) => decodeURIComponent(text.replace(/-/g, " ")).trim().toLowerCase();
+const normalizeText = (text) =>
+  decodeURIComponent(text.replace(/-/g, " ")).trim();
 
 
 
@@ -26,6 +27,8 @@ const JobDetailsPage = () => {
     console.log("Job List:", jobList);
     console.log("Current Job:", job);
   }, [job]);
+
+  console.log(normalizeText("werkstudent-datenschutz-(m/w/d)"));
 
   if (!job) {
     return (

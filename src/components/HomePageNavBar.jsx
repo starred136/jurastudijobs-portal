@@ -47,7 +47,7 @@ const HomePageNavBar = () => {
       <div className={`${styles.menu} ${menuOpen ? styles.open : ""}`}>
         <ul>
           <li>
-            <a href="#">Blog</a>
+            <a href="/">Blog</a>
           </li>
         </ul>
       </div>

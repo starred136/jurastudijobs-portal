@@ -7,13 +7,14 @@ const NotFoundPage = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.errorCode}>404</h1>
-      <h2 className={styles.errorMessage}>Page Not Found</h2>
+      <h1 className={styles.errorCode}>🚧</h1>
+      <h2 className={styles.errorMessage}>Seite im Aufbau</h2>
       <p className={styles.description}>
-        Sorry, we couldn’t find the page you’re looking for.
+        Wir bereiten wertvolle Informationen für Sie vor. Bleiben Sie dran!
       </p>
+      {/* (Sorry, this page is still under construction. Please check back later.) */}
       <button className={styles.homeButton} onClick={() => navigate('/')}>
-        Go to Homepage
+        Zur Startseite
       </button>
     </div>
   );
