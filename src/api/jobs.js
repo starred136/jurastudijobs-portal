@@ -164,7 +164,7 @@ export const jobList = [
     semester: 3,
     semesterImage: "/assets/images/semester2.png",
     tags: ["Vertragsdaten", "Klassifizierung", "Dokumentation", "Prüfung"],
-    applyLink: "hhttps://de.indeed.com/viewjob?jk=eb7b470366684ff3&tk=1ie8i7b4jj0iv84e&from=serp&vjs=3",
+    applyLink: "https://de.indeed.com/viewjob?jk=eb7b470366684ff3&tk=1ie8i7b4jj0iv84e&from=serp&vjs=3",
     description: `
       <h2>Vollständige Stellenbeschreibung</h2>
     <p>
