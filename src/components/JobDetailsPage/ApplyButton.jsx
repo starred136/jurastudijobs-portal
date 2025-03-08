@@ -9,7 +9,7 @@ const ApplyButton = ({ job }) => {
     }
 
     // Construct the dynamic application link with URL parameters
-    const externalApplyUrl = `${job.applyLink}/apply?From=Jurastudijobs.com&company=${encodeURIComponent(job.company)}&jobTitle=${encodeURIComponent(job.title)}`;
+    const externalApplyUrl = `${job.applyLink}/Apply?From=Jurastudijobs.com&company=${encodeURIComponent(job.company)}&jobTitle=${encodeURIComponent(job.title)}`;
 
     // Redirect to the external job application link
     window.location.href = externalApplyUrl;
